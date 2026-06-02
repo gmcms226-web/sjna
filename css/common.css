@@ -1,0 +1,684 @@
+/* ===============================
+   공통 초기화
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #222;
+    letter-spacing: -0.02em;
+  word-break: keep-all;
+  }
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+  
+  /* 전체 안쪽 폭 */
+  .inner {
+     width: 100%;
+     max-width: 1200px;
+      margin: 0 auto;
+     padding: 0 20px;
+  }
+  
+  /* ===============================
+     header-top
+  ================================ */
+  .header-top {
+    width: 100%;
+    height: 38px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .header-top-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 왼쪽 기관 링크 */
+  .site-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-list li {
+    height: 100%;
+  }
+  
+  .site-list a {
+    height: 100%;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #e5e5e5;
+    white-space: nowrap;
+  
+    /* 추가 */
+    transition: 0.3s;
+  }
+  .site-list a:hover {
+    background: #209b8f;
+    color: #fff;
+  }
+  .site-list li:first-child a {
+    border-left: 1px solid #e5e5e5;
+  }
+  
+  /* hover */
+.site-list a:hover {
+    background: #209b8f;
+    color: #fff;
+  }
+  
+  /* 오른쪽 로그인 메뉴 */
+  .util-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #666;
+  }
+  
+  .util-list a {
+    font-size: 12px;
+  }
+  
+  .util-list a:hover {
+    color: #209b8f;
+  }
+  
+  /* ===============================
+     모바일
+  ================================ */
+  @media (max-width: 768px) {
+    .header-top {
+      display: none;
+    }
+  }
+  /*main-header*/
+  /* =========================
+   main-header
+========================= */
+.main-header {
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .main-header-inner {
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* =========================
+     로고
+  ========================= */
+  .logo img {
+    height: 48px;
+    display: block;
+  }
+  
+  /* =========================
+     메뉴
+  ========================= */
+  .gnb {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .gnb a {
+    position: relative;
+  
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+  
+    transition: 0.3s;
+  }
+  
+  /* hover */
+  .gnb a:hover {
+    color: #209b8f;
+  }
+  
+  /* 밑줄 효과 */
+  .gnb a::after {
+    content: "";
+  
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+  
+    width: 0;
+    height: 2px;
+  
+    background: #209b8f;
+  
+    transition: 0.3s;
+  }
+  
+  .gnb a:hover::after {
+    width: 100%;
+  }
+  
+  /* =========================
+     오른쪽 아이콘
+  ========================= */
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .icon-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+  
+    font-size: 24px;
+    color: #222;
+  
+    transition: 0.3s;
+  }
+  
+  .icon-btn:hover {
+    color: #209b8f;
+  }
+  
+  /* =========================
+     모바일
+  ========================= */
+  @media (max-width: 768px) {
+  
+    .main-header {
+      height: 72px;
+    }
+  
+    .main-header-inner {
+      padding: 0 16px;
+    }
+  
+    /* 모바일에선 메뉴 숨김 */
+    .gnb {
+      display: none;
+    }
+  
+    /* 검색 숨김 */
+    .search-btn {
+      display: none;
+    }
+  
+    /* 로고 작게 */
+    .logo img {
+      height: 40px;
+    }
+  
+    /* 햄버거 크기 */
+    .menu-btn {
+      font-size: 22px;
+    }
+  }
+
+
+
+
+
+
+  /* =========================
+   floating quick menu
+========================= */
+.floating-quick {
+  position: fixed;
+  right: 28px;
+  bottom: 42px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 열리는 메뉴 */
+.quick-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: 0.3s;
+}
+
+.floating-quick.open .quick-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 메뉴 카드 */
+.quick-panel a {
+  width: 96px;
+  height: 108px;
+
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+
+  transition: 0.25s;
+}
+
+.quick-panel a:hover {
+  transform: translateY(-5px);
+}
+
+.quick-panel img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+/* 통합예약 버튼 */
+.quick-panel .reservation-btn{
+  background:#12a64a;
+}
+
+.quick-panel .reservation-btn span{
+  color:#fff;
+}
+
+/* 아이콘 흰색 png 보이게 */
+.quick-panel .reservation-btn img{
+  filter: brightness(0) invert(1);
+}
+/* 초록 열기 버튼 */
+.quick-toggle {
+  width: 72px;
+  height: 72px;
+
+  border: 0;
+  border-radius: 50%;
+  background: #12a64a;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.floating-quick.open .quick-toggle {
+  transform: rotate(45deg);
+}
+
+/* TOP 버튼 */
+.top-btn {
+  width: 72px;
+  height: 72px;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.top-btn span {
+  font-size: 13px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .floating-quick {
+    right: 14px;
+    bottom: 24px;
+  }
+
+  .quick-panel a {
+    width: 82px;
+    height: 94px;
+    font-size: 12px;
+  }
+
+  .quick-toggle,
+  .top-btn {
+    width: 58px;
+    height: 58px;
+  }
+
+  .quick-toggle {
+    font-size: 26px;
+  }
+}
+.mini-area {
+  position: relative;
+  width: 430px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.mini-pagination {
+  position: absolute;
+ 
+  bottom: -6px;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  z-index: 999;
+}
+
+.mini-pagination span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.6;
+}
+
+.mini-pagination span.active {
+  width: 28px;
+  border-radius: 999px;
+  opacity: 1;
+}
+/*all-menu*/
+.all-menu {
+  display: none;
+  padding: 60px 0 80px;
+  background: #f7f7f7;
+}
+
+.all-menu.active {
+  display: block;
+}
+
+.all-menu-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  gap: 28px;
+}
+
+.menu-column {
+  flex: 1;
+}
+
+.menu-column h3 {
+  margin-bottom: 28px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.box-link {
+  height: 58px;
+  margin-bottom: 20px;
+  padding: 0 22px;
+
+  border: 1px solid #999;
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.box-link:hover {
+  background: #229d35;
+  border-color: #229d35;
+  color: #fff;
+}
+
+
+.text-links {
+  margin: -4px 0 24px;
+  padding-left: 6px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text-links a {
+  width: fit-content;
+  position: relative;
+
+  font-size: 16px;
+  color: #222;
+  line-height: 1.4;
+}
+
+.text-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 2px;
+  background: #229d35;
+
+  transition: 0.25s;
+}
+
+.text-links a:hover {
+  color: #229d35;
+}
+
+.text-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   footer
+========================= */
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* 상단 바로가기 */
+.footer-link-bar {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer-link-bar a {
+  flex: 1;
+  height: 72px;
+  padding: 0 36px;
+
+  border-right: 1px solid #e5e5e5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 180px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+}
+
+.footer-link-bar a:first-child {
+  border-left: 1px solid #e5e5e5;
+}
+
+.footer-link-bar span {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* 하단 */
+.footer-inner {
+  min-height: 180px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.footer-logo img {
+  width: 210px;
+  display: block;
+}
+
+.footer-info {
+  flex: 1;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-menu a {
+  position: relative;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-menu a:not(:last-child)::after {
+  content: "·";
+  margin-left: 14px;
+  color: #999;
+}
+
+.footer-menu strong {
+  font-weight: 900;
+  color: #111;
+}
+
+.public-text {
+  margin-bottom: 18px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+}
+
+.public-text span {
+  font-weight: 900;
+}
+
+.address,
+.copy {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   mobile
+========================= */
+@media (max-width: 768px) {
+  .footer-link-bar {
+    flex-direction: column;
+  }
+
+  .footer-link-bar a {
+    height: 62px;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 24px;
+    border-right: none;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .footer-logo img {
+    width: 170px;
+  }
+
+  .footer-menu {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-menu a {
+    font-size: 14px;
+  }
+
+  .public-text {
+    font-size: 15px;
+  }
+
+  .address,
+  .copy {
+    font-size: 14px;
+  }
+}

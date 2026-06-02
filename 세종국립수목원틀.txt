@@ -1,0 +1,51 @@
+지금부터 너는 실무 개발자 관점에서 세종국립수목원 웹페이지를 만들거야.
+보내준 이미지 참고해서 웹페이지를 만들어줘.
+#구성
+<header>
+top-header
+main-header
+<main>
+visual
+info-bar
+quick-menu
+event
+plant
+news
+banner
+live
+<footer>
+디자인 조건
+
+1. 폰트 : 폰트우선순위 'SCoreDream', "맑은 고딕", "돋움", dotum, sans-serif; 자간조정은 -0.2px
+구글폰트에서 'SCoreDream';
+2. 포인트 컬러 : 배경색 #279c2f;
+
+일단 header 부분부터 만들어갈거야. 
+코드를 짜준 이후에는 html, css, js 모두 초보자들도 이해하기 쉽고 나중에 수정하기 편하게 주석달아줘 
+
+
+<header>
+top-header
+배경색은 연한회색으로 되어있고
+pc-좌측상단위치에는 /a태그 한국수목원정원관리원, 국립백두대간수목원, 국립세종수목원, 국립한국생식물원, 국립정원문화원이 나열되어있음 (마우스를 올리면 hover효과 background#299b8c/color #fff 색깔바뀜, 커서는 손모양포인터로 바뀜 )
+우측상단/로그인,회원가입이 a태그로 되어있음. 
+모바일- 
+좌측/햄버거바img(01_top_header_hambuger)(한국수목원정원관리원, 국립백두대간수목원, 국립세종수목원, 국립한국생식물원, 국립정원문화원), 
+중앙이미지/한국수목원정원관리원국립세종수목원img(01_top_header)
+우측/a태그 사람이미지 01_top_header_login
+main-header
+pc-
+좌측에는 h1으로 정원관리원국립세종수목원img(01_top_header)가 들어가있고, 중간에는 관람안내, 둘러보기, 참여하기, 기관소개가 a태그로 구성되어있음. 중간a태그들은 글자간 간격이 보내준 pc버전 이미지를 보면서  간격을 맞춰줘. 폰트사이즈는 21px  
+모바일- 모바일버전으로 크기를 줄이면 top-header만남고 전부 숨겨지게 만들어줘. 
+<main>
+visual
+info-bar
+quick-menu
+event
+plant
+news
+banner
+live
+
+<footer>
+footer

@@ -1,0 +1,245 @@
+/* chatbot full page */
+.chat-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.chat-page-close {
+  position: fixed;
+  right: 42px;
+  top: 42px;
+
+  border: 0;
+  background: none;
+  font-size: 34px;
+  color: #222;
+  cursor: pointer;
+}
+
+.chat-page-inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 160px 20px 100px;
+}
+
+/* green hero */
+.chat-hero {
+  height: 250px;
+  padding: 0 90px;
+  border-radius: 22px;
+  background: #16a80f;
+
+  display: flex;
+  align-items: center;
+  gap: 70px;
+
+  color: #fff;
+}
+
+.chat-hero img {
+  width: 150px;
+}
+
+.chat-hero h2 {
+  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.chat-hero p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* search */
+.chat-search-box {
+  height: 88px;
+  margin: 80px 0 54px;
+  padding: 0 28px;
+
+  border: 3px solid #e5e5e5;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+}
+
+.chat-search-box input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.chat-search-box button {
+  border: 0;
+  background: none;
+  font-size: 36px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* keywords */
+.chat-keywords h3,
+.chat-faq h3 {
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.keyword-box {
+  padding: 34px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.keyword-box a {
+  padding: 13px 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.keyword-box a:hover {
+  border-color: #16a80f;
+  color: #16a80f;
+}
+
+/* faq */
+.chat-faq {
+  margin-top: 58px;
+}
+
+.faq-list {
+  display: flex;
+  gap: 24px;
+}
+
+.faq-card {
+  flex: 1;
+  min-height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  color: #111;
+}
+
+.faq-icon {
+  padding-top: 32px;
+  font-size: 28px;
+}
+
+.faq-card strong {
+  display: block;
+  padding: 18px 24px 28px;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.faq-card p {
+  padding: 22px;
+  background: #3b3b3b;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .chat-page-close {
+    right: 22px;
+    top: 22px;
+    font-size: 28px;
+  }
+
+  .chat-page-inner {
+    padding: 80px 18px 70px;
+  }
+
+  .chat-hero {
+    height: auto;
+    padding: 28px 24px;
+    gap: 22px;
+    border-radius: 10px;
+  }
+
+  .chat-hero img {
+    width: 90px;
+  }
+
+  .chat-hero h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .chat-hero p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .chat-search-box {
+    height: 70px;
+    margin: 38px 0;
+    padding: 0 18px;
+    border-width: 2px;
+  }
+
+  .chat-search-box input {
+    font-size: 18px;
+  }
+
+  .chat-search-box button {
+    font-size: 28px;
+  }
+
+  .keyword-box {
+    padding: 20px;
+  }
+
+  .keyword-box a {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .faq-list {
+    flex-direction: column;
+  }
+}
+/*챗봇대답*/
+.chat-answer-box {
+  margin-top: -30px;
+  margin-bottom: 54px;
+}
+
+.chat-message {
+  max-width: 760px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.chat-message.bot {
+  background: #f1f5f2;
+  color: #111;
+}
+
+.chat-message.user {
+  margin-left: auto;
+  background: #16a80f;
+  color: #fff;
+}

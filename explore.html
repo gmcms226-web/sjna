@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>둘러보기</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+ <!--main-header-->
+   <body>
+ <header class="main-header">
+
+    <div class="inner main-header-inner">
+  
+      <!-- 로고 -->
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="국립세종수목원">
+        </a>
+      </h1>
+  
+      <!-- pc 네비게이션 -->
+      <nav class="gnb">
+        <a href="guide.html">관람안내</a>
+        <a href="explore.html">둘러보기</a>
+        <a href="participate.html">참여하기</a>
+        <a href="about.html">기관소개</a>
+      </nav>
+  
+      <!-- 오른쪽 아이콘 -->
+      <div class="header-icons">
+  
+        <!-- 검색 -->
+        <button class="icon-btn search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+  
+        <!-- 햄버거 -->
+        <button class="icon-btn menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+  
+      </div>
+  
+    </div>
+  
+  </header>
+    <!--all-menu-->
+    <div class="all-menu">
+
+      <div class="all-menu-inner">
+    
+        <div class="menu-column">
+          <h3>둘러보기</h3>
+    
+          <a href="#" class="box-link">이용안내</a>
+          <a href="#" class="box-link active">입장권 구매</a>
+          <a href="#" class="box-link">종합안내도</a>
+          <a href="#" class="box-link">시설안내</a>
+    
+          <div class="text-links">
+            <a href="#">가든샵</a>
+            <a href="#">편의시설</a>
+          </div>
+    
+          <a href="#" class="box-link">회원혜택</a>
+        </div>
+    
+        <div class="menu-column">
+          <h3>둘러보기</h3>
+    
+          <a href="#" class="box-link">추천코스</a>
+          <a href="#" class="box-link">전시공간 소개</a>
+          <a href="#" class="box-link">이달의 식물</a>
+          <a href="#" class="box-link">수목원의 오늘</a>
+        </div>
+    
+        <div class="menu-column">
+          <h3>참여하기</h3>
+    
+          <a href="#" class="box-link">교육 프로그램</a>
+    
+          <div class="text-links">
+            <a href="#">교육소개</a>
+            <a href="#">교육 프로그램 신청</a>
+            <a href="#">교육자료</a>
+            <a href="#">생생 교육후기</a>
+            <a href="#">교육영상</a>
+            <a href="#">교육라운지</a>
+          </div>
+    
+          <a href="#" class="box-link">전시 프로그램</a>
+          <a href="#" class="box-link">행사 프로그램</a>
+    
+          <div class="text-links">
+            <a href="#">야간개장</a>
+            <a href="#">문화행사</a>
+            <a href="#">사연나무</a>
+          </div>
+    
+          <a href="#" class="box-link">전시·행사 캘린더</a>
+        </div>
+    
+        <div class="menu-column">
+          <h3>기관소개</h3>
+    
+          <a href="#" class="box-link">원장 인사말</a>
+          <a href="#" class="box-link">수목원 소개</a>
+          <a href="#" class="box-link">연혁</a>
+          <a href="#" class="box-link">오시는길</a>
+        </div>
+    
+      </div>
+    </div>
+    <!--sub-visaul explore-visual-->
+    <section class="sub-visual explore-visual"></section>
+    <!---->
+<!--course-section-->
+<section class="course-section">
+    <div class="inner">
+  
+      <div class="sub-page-top">
+        <div class="breadcrumb">
+          <a href="index.html">🏠 HOME</a>
+          <span>›</span>
+          <a href="#">둘러보기</a>
+          <span>›</span>
+          <strong>추천코스</strong>
+        </div>
+  
+        <div class="guide-util">
+          <button><img src="sub_images/ico01.png" alt=""></button>
+          <button><img src="sub_images/ico02.png" alt=""></button>
+        </div>
+      </div>
+  
+      <h2 class="course-title">추천코스</h2>
+  
+      <div class="course-tabs">
+        <button class="active" data-course="1">추천코스1</button>
+        <button data-course="2">추천코스2</button>
+        <button data-course="3">추천코스3</button>
+      </div>
+  
+      <div class="course-content">
+
+        <div class="course-intro">
+          <div class="course-text">
+            <h3 id="courseName">1코스</h3>
+            <p id="courseDesc">가볍게 둘러볼 수 있는 추천코스입니다.</p>
+          </div>
+      
+          <div class="course-illust">
+            <img src="sub_images/course_bg.png" alt="">
+          </div>
+        </div>
+      
+        <div class="course-info-bar">
+      
+          <div class="course-info-item">
+            <img src="sub_images/courseic01.png" alt="">
+            <span>난이도</span>
+            <div id="courseLevel" class="course-level"><img src="sub_images/star.png" alt=""></div>
+          </div>
+      
+          <div class="course-info-item">
+            <img src="sub_images/courseic02.png" alt="">
+            <span>거리</span>
+            <strong id="courseDistance">1 km</strong>
+          </div>
+      
+          <div class="course-info-item">
+            <img src="sub_images/courseic03.png" alt="">
+            <span>소요시간</span>
+            <strong id="courseTime">1시간</strong>
+          </div>
+      
+        </div>
+      
+        <div class="course-image">
+          <img id="courseImg" src="sub_images/course01.jpg" alt="추천코스1">
+        </div>
+      
+      </div>
+  
+    </div>
+  </section>
+<!-- route section -->
+<section class="route-section">
+  <div class="inner">
+
+    <h3 class="route-title">관람동선</h3>
+
+    <ol class="route-list">
+
+      <li>
+        <span class="route-num">1</span>
+        <strong>방문자센터</strong>
+      </li>
+
+      <li>
+        <span class="route-arrow"></span>
+        <span class="route-num">2</span>
+        <strong>사계절전시 온실</strong>
+      </li>
+
+      <li>
+        <span class="route-arrow"></span>
+        <span class="route-num">3</span>
+        <strong>한국전통정원</strong>
+      </li>
+
+      <li>
+        <span class="route-arrow"></span>
+        <span class="route-num">4</span>
+        <strong>분재원</strong>
+      </li>
+
+      <li>
+        <span class="route-arrow"></span>
+        <span class="route-num">5</span>
+        <strong>어린이정원</strong>
+      </li>
+
+      <li>
+        <span class="route-arrow"></span>
+        <span class="route-num">6</span>
+        <strong>생활정원</strong>
+      </li>
+
+    </ol>
+
+  </div>
+</section>
+<section class="place-slider-section">
+
+  <div class="swiper place-swiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place01.jpg" alt="방문자센터">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>방문자센터</h3>
+        </a>
+      </div>
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place02.jpg" alt="사계절전시 온실">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>사계절전시 온실</h3>
+        </a>
+      </div>
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place03.jpg" alt="한국전통정원">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>한국전통정원</h3>
+        </a>
+      </div>
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place04.jpg" alt="분재원">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>분재원</h3>
+        </a>
+      </div>
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place05.jpg" alt="어린이정원">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>어린이정원</h3>
+        </a>
+      </div>
+
+      <div class="swiper-slide place-card">
+        <a href="#">
+          <div class="place-img">
+            <img src="sub_images/place01.jpg" alt="생활정원">
+            <span class="place-plus">+</span>
+          </div>
+          <h3>생활정원</h3>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="place-scrollbar swiper-scrollbar"></div>
+
+</section>
+<!-- footer -->
+<footer class="footer">
+
+    <!-- 상단 바로가기 -->
+    <div class="footer-link-bar">
+      <a href="#">
+        소속기관 바로가기
+        <span>+</span>
+      </a>
+  
+      <a href="#">
+        유관기관 바로가기
+        <span>+</span>
+      </a>
+  
+      <a href="#">
+        관련서비스 바로가기
+        <span>+</span>
+      </a>
+    </div>
+  
+    <!-- 하단 정보 -->
+    <div class="inner footer-inner">
+  
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="국립세종수목원">
+      </div>
+  
+      <div class="footer-info">
+  
+        <div class="footer-menu">
+          <a href="#"><strong>개인정보처리방침</strong></a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">홈페이지 개선 의견</a>
+        </div>
+  
+        <p class="public-text">
+          이 누리집은 <span>산림청 산하 공공기관 누리집입니다.</span>
+        </p>
+  
+        <p class="address">
+          국립세종수목원 (30106) 세종특별자치시 수목원로 136 국립세종수목원 | 044-251-0001
+        </p>
+  
+        <p class="copy">
+          ©국립세종수목원.All Rights Reserved.
+        </p>
+  
+      </div>
+  
+    </div>
+  
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/explore.js"></script>
+  </body>
+  </html>

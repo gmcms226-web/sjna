@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- chatbot page -->
+<a href="index.html" class="chat-page-close">
+  <i class="fa-solid fa-xmark"></i>
+</a>
+
+  <div class="chat-page-inner">
+
+    <section class="chat-hero">
+      <img src="images/chatbot.png" alt="챗봇">
+      <div>
+        <h2>한국수목정원관리원 챗봇 서비스</h2>
+        <p>한국수목원정원관리원 홈페이지에서 제공하는 다양한 정보들을 검색하실 수 있습니다.</p>
+      </div>
+    </section>
+
+    <form class="chat-search-box">
+      <input
+  type="text"
+  placeholder="예) 입장료, 요금, 주차, 운영시간, 관람시간, 휴관, 쉬는날, 위치, 주소">
+      <button type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <!--ai-->
+    <div class="chat-answer-box">
+      <div class="chat-message bot">
+        안녕하세요. 수목원 이용정보를 도와드릴게요.
+      </div>
+    </div>
+    <section class="chat-keywords">
+      <h3>인기키워드</h3>
+
+      <div class="keyword-box">
+        <a href="#">국립세종수목원 위치</a>
+        <a href="#">국립백두대간수목원 호랑이숲 관람 방법</a>
+        <a href="#">한국자생식물원 식물 종류</a>
+        <a href="#">세종수목원 추천 관람 코스</a>
+        <a href="#">세종수목원 안내 데스크 위치</a>
+        <a href="#">수목원 반려동물 동반</a>
+        <a href="#">관람 가능 시간</a>
+        <a href="#">주차장 위치</a>
+        <a href="#">입장료</a>
+      </div>
+    </section>
+    
+    <section class="chat-faq">
+      <h3>자주 묻는 질문</h3>
+
+      <div class="faq-list">
+        <a href="#" class="faq-card">
+          <div class="faq-icon">🏡</div>
+          <strong>(특정 수목원)의 (정보)를 알려줘.</strong>
+          <p>방문하고 싶은 수목원의 이름과 알고 싶은 정보를 정확히 넣어주세요.</p>
+        </a>
+
+        <a href="#" class="faq-card">
+          <div class="faq-icon">🏞️</div>
+          <strong>(날짜)에 볼 수 있는 문화행사나 기획전시 알려줘.</strong>
+          <p>현재 챗봇은 실시간 정보제공이 부족할 수 있습니다.</p>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</div>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
