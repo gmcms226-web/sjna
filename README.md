@@ -39,6 +39,7 @@
 - 자동 재생, 커스텀 속도, 호버 효과 등 세부 옵션 조정
 
 ### 2. 챗봇 (JavaScript 키워드 응답 시스템)
+<img width="1900" height="692" alt="Image" src="https://github.com/user-attachments/assets/3f00e406-93cb-42fd-9c5f-727f0a2ebe27" />
 - **JavaScript** 기반 키워드 응답 시스템 활용
 - 사용자가 입력한 키워드를 분석하여 관련 수목원 정보를 자동으로 응답
 - 인기 키워드 및 자주 묻는 질문(FAQ) 바로가기 기능 제공
