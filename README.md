@@ -32,6 +32,7 @@
 
 ✨ 주요 기능
 1. 반응형 웹 (Media Query)
+<br>
 <img width="1633" height="745" alt="Image" src="https://github.com/user-attachments/assets/3f7f40fb-ddc8-410a-81cc-86c333b1fb57" />
 Media Query 기반 반응형 레이아웃 구현
 PC / 모바일 환경에 맞춰 헤더, 네비게이션, 콘텐츠 레이아웃 자동 전환
