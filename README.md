@@ -55,7 +55,7 @@ JavaScript 기반 키워드 응답 시스템 활용
 인기 키워드 및 자주 묻는 질문(FAQ) 바로가기 기능 제공
 
 6. 실시간 날씨 정보 (OpenWeatherMap API)
-
+<img width="1810" height="947" alt="Image" src="https://github.com/user-attachments/assets/86428312-8f39-401f-9f7c-a640adcb0eb7" />
 OpenWeatherMap API를 연동하여 실시간 날씨 데이터 표시
 현재 온도, 날씨 설명, 날씨 아이콘이 실시간으로 반영됨
 방문 전 날씨를 확인할 수 있는 사용자 편의 기능
@@ -101,6 +101,42 @@ OpenWeatherMap API를 연동하여 실시간 날씨 데이터 표시
 - AI를 활용해 여러 가지 해결 방법을 질문하고, 직접 시도해보는 과정을 반복
 - CSS `transition`과 Swiper 이벤트 콜백을 조합하여 원하는 호버 효과 완성
 
+### 공통 CSS 분리 및 서브페이지 구조 정리
+
+메인페이지 작업이 어느 정도 진행된 후 서브페이지를 추가하면서 header, footer, 모바일 메뉴처럼 여러 페이지에서 반복되는 코드가 많아지는 문제가 있었습니다.
+
+- 기존 `style.css`에서 공통으로 사용되는 header, footer 영역을 `common.css`로 분리
+- 메인 전용 스타일은 `main.css`, 서브페이지 전용 스타일은 `sub.css`로 역할 구분
+- CSS 연결 순서를 `common.css → sub.css`로 정리하여 공통 스타일 위에 페이지별 스타일이 적용되도록 개선
+- 이후 guide, explore, participate, about 페이지에서 동일한 header/footer 구조를 재사용할 수 있도록 구성
+
+### 이미지 경로 오류 해결
+
+코스 이미지와 서브페이지 비주얼 이미지가 정상적으로 출력되지 않는 문제가 있었습니다.
+
+- HTML과 JavaScript에서 사용하는 이미지 경로를 비교하며 원인 확인
+- `sub_images`와 `sub-images`처럼 언더바와 하이픈 차이로 발생한 경로 오류를 수정
+- 이미지 확장자 `.jpg`, `.png`가 실제 파일명과 일치하는지 확인
+- 브라우저 개발자 도구의 Console과 Network 탭을 활용해 이미지 로딩 실패 원인 파악
+
+### 반응형 레이아웃 깨짐 수정
+
+PC 화면에서는 정상적으로 보이던 카드, 표, 코스 정보 영역이 모바일 화면에서 글자가 줄바꿈되거나 이미지가 과도하게 커지는 문제가 발생했습니다.
+
+- `@media (max-width: 768px)`를 활용하여 모바일 전용 레이아웃 작성
+- PC에서는 가로 배치, 모바일에서는 세로 배치가 되도록 `flex-direction` 변경
+- 이미지에는 `width: 100%`, `object-fit: cover`를 적용하여 비율이 깨지지 않도록 수정
+- 긴 텍스트에는 `word-break: keep-all`, `line-height`를 적용해 가독성 개선
+
+
+### 실시간 날씨 API 연동
+
+메인페이지의 날씨 영역에 실제 세종 지역 날씨 정보를 표시하기 위해 OpenWeatherMap API를 활용했습니다.
+
+- `fetch()`를 사용해 OpenWeatherMap API에서 현재 날씨 데이터 요청
+- 응답 데이터에서 온도와 날씨 설명을 추출하여 화면에 표시
+- 날씨 상태에 따라 Font Awesome 아이콘이 변경되도록 조건문 작성
+- API 호출 실패 시 기본 안내 문구가 표시되도록 예외 처리 구현
 <br>
 
 ## 💬 회고
