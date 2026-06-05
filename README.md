@@ -33,6 +33,7 @@
 ## ✨ 주요 기능
 
 ### 1. 슬라이더 (Swiper.js)
+<img width="1900" height="692" alt="Image" src="https://github.com/user-attachments/assets/9d418435-9451-4c37-ba9e-30ebb958ec55" />
 - **Swiper.js** 라이브러리를 활용한 이미지 슬라이더 구현
 - 메인 비주얼 슬라이더, 장소 카드 슬라이더 등 다양한 섹션에 적용
 - 자동 재생, 커스텀 속도, 호버 효과 등 세부 옵션 조정
