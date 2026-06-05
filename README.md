@@ -38,7 +38,7 @@ PC / 모바일 환경에 맞춰 헤더, 네비게이션, 콘텐츠 레이아웃 
 모바일에서는 햄버거 메뉴로 전환되어 사용성 최적화
 
 2. 추천코스 탭 UI (JavaScript)
-
+<img width="1633" height="870" alt="Image" src="https://github.com/user-attachments/assets/e9182623-f8b7-43ad-981e-f7c89092f8ec" />
 JavaScript 기반 탭 클릭 시 코스 정보(이름, 설명, 난이도, 거리, 소요시간, 이미지)가 동적으로 변경
 추천코스 1 / 2 / 3 탭 전환 기능 구현
 
