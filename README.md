@@ -36,24 +36,24 @@
 Media Query 기반 반응형 레이아웃 구현
 PC / 모바일 환경에 맞춰 헤더, 네비게이션, 콘텐츠 레이아웃 자동 전환
 모바일에서는 햄버거 메뉴로 전환되어 사용성 최적화
-
+<br>
 2. 추천코스 탭 UI (JavaScript)
 <img width="1633" height="870" alt="Image" src="https://github.com/user-attachments/assets/e9182623-f8b7-43ad-981e-f7c89092f8ec" />
 JavaScript 기반 탭 클릭 시 코스 정보(이름, 설명, 난이도, 거리, 소요시간, 이미지)가 동적으로 변경
 추천코스 1 / 2 / 3 탭 전환 기능 구현
-
+<br>
 4. 슬라이더 (Swiper.js)
 <img width="1900" height="692" alt="Image" src="https://github.com/user-attachments/assets/9d418435-9451-4c37-ba9e-30ebb958ec55" />
 Swiper.js 라이브러리를 활용한 이미지 슬라이더 구현
 메인 비주얼 슬라이더, 장소 카드 슬라이더 등 다양한 섹션에 적용
 자동 재생, 커스텀 속도, 호버 효과 등 세부 옵션 조정
-
+<br>
 5. 챗봇 (JavaScript 키워드 응답 시스템)
 <img width="1900" height="692" alt="Image" src="https://github.com/user-attachments/assets/3f00e406-93cb-42fd-9c5f-727f0a2ebe27" />
 JavaScript 기반 키워드 응답 시스템 활용
 사용자가 입력한 키워드를 분석하여 관련 수목원 정보를 자동으로 응답
 인기 키워드 및 자주 묻는 질문(FAQ) 바로가기 기능 제공
-
+<br>
 6. 실시간 날씨 정보 (OpenWeatherMap API)
 <img width="1810" height="947" alt="Image" src="https://github.com/user-attachments/assets/86428312-8f39-401f-9f7c-a640adcb0eb7" />
 OpenWeatherMap API를 연동하여 실시간 날씨 데이터 표시
